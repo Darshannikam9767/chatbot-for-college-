@@ -12,11 +12,16 @@ Designed for both **desktop and mobile** views.
 
 ## 📂 Folder Structure
 
-    /Frontend
-     ├── index.html
-     ├── style.css
-     ├── script.js
-     └── Assets/
+    my-repo/
+        └── Frontend/
+                ├── ChatSection/
+                │       ├── index.html
+                │       ├── style.css
+                │       └── script.js
+                └── Assets/
+                        ├── botlogo.png
+                        └── seniorclglogo.jpeg
+
 
 ## 🚀 Features
 
