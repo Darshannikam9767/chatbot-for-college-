@@ -1,0 +1,363 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Mulish", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    height: 100vh;
+    overflow: hidden;
+    background: #08262c;
+}
+
+/* HEADER */
+.header {
+    justify-self: center;
+    margin: 15px;
+    padding: 5px;
+    height: 13%;
+    width: 97.8%;
+    border-radius: 25px;
+    box-shadow: 5px 5px 5px black;
+    background: #124a59;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+}
+
+.logo {
+    width: 70px;
+    height: 70px;
+    background: url("seniorclglogo.jpeg");
+    background-size: cover;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+.header-text h2 {
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.header-text p {
+    font-size: 14px;
+}
+
+.header-text span {
+    font-size: 12px;
+}
+
+/* MAIN */
+.main {
+    height: 85%;
+    display: flex;
+}
+
+/* LEFT PANEL */
+.left-panel {
+    width: 30%;
+    height: 81vh;
+    padding: 0 15px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.box {
+    overflow-y: auto;
+    /* vertical scroll */
+    overflow-x: auto;
+    /* horizontal scroll */
+    scrollbar-width: thin;
+    scrollbar-color: #08262c #124a59;
+    flex: 1;
+    border:1px ;
+    box-shadow: 5px 5px 5px black;
+    background: #124a59;
+    border-radius: 25px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.box h3 {
+    color: white;
+    font-size: 16px;
+    border-bottom: 1px solid #d1f7d6;
+    padding-bottom: 5px;
+}
+
+ol {
+    margin-left: 10px;
+}
+
+li,a {
+    color: white;
+    margin: 5px;
+}
+
+/* CHAT PANEL */
+.chat-panel {
+    width: 68.8%;
+    height: 81vh;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #d1f7d6 ;
+}
+
+/* Chat Header */
+.chat-header {
+    padding: 2px;
+    border-radius:1px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.bot-logo {
+    width: 50px;
+    height: 50px;
+    background:url("botlogo.png");
+    border: 2px solid #1f3c88 ;
+    background-size: cover;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bot-msg {
+    background: #e6ecff;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+/* new lines */
+.chat-body {
+    overflow-y: auto;
+    overflow-x: hidden;
+    flex: 1;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* USER MESSAGE (Right Side) */
+.user-msg {
+    align-self: flex-end;
+    background: #d1f7d6;
+    padding: 8px 12px;
+    width: fit-content;
+    max-width: 70%;
+    border-radius: 10px 10px 0 10px;
+}
+
+/* BOT REPLY (Left Side) */
+.bot-reply {
+    align-self: flex-start;
+    background: #f1f1f1;
+    padding: 8px 12px;
+    width: fit-content;
+    max-width: 70%;
+    border-radius: 10px 10px 10px 0;
+}
+
+/* Chat Input */
+.chat-input {
+    /*border-top: 1px solid #ddd;*/
+    padding: 2px;
+    margin-bottom: 2px;
+}
+
+.suggestions {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+.suggestions button {
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    border: 1px solid black;
+    background: #124a59;
+    cursor: pointer;
+}
+
+.input-box {
+    display: flex;
+    gap: 10px;
+}
+
+.input-box input {
+    color: white;
+    flex: 1;
+    padding: 8px;
+    border-radius: 25px;
+    background-color:#124a59 ;
+    border: 1px solid black;
+    outline: none;
+}
+
+.send-btn {
+    margin-right: 5px;
+    padding: 8px 15px;
+    background: #0de499;
+    color: white;
+    border: none;
+    /*bot-logo: 5px;*/
+    border-radius: 10px 100px / 120px;
+    cursor: pointer;
+}
+
+/* ===== MOBILE VIEW ===== */
+@media (max-width: 768px) {
+    .main {
+        flex-direction: column;
+    }
+
+    /* Hide left panel initially */
+    .left-panel {
+        position: fixed;
+        top: 13%;
+        left: -100%;
+        width: 80%;
+        height: 87vh;
+        background: #08262c;
+        transition: 0.3s;
+        z-index: 1000;
+        padding: 10px;
+    }
+
+    .bot-msg{
+        font-size: 11px;
+    }
+
+    .left-panel.active {
+        left: 0;
+    }
+
+    /* Show hamburger */
+    .menu-btn{
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+        margin-right: 15px;
+        color: #0de499;
+    }
+
+    .menu-btn.active {
+        color: #08262c;
+    }
+
+    /* Header adjustments */
+    .header {
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+        justify-content: flex-start;
+        justify-content: center;
+    }
+
+    .logo{
+        margin: 0 3px 0 0;
+    }
+    .header-text h2 {
+        font-size: 15px;
+    }
+
+    .header-text p {
+        font-size: 10px;
+    }
+
+    .header-text span {
+        font-size: 10px;
+    }
+
+    /* Chat takes full width */
+    .chat-panel {
+        width: 100%;
+        height: 87vh;
+        border: none;
+    }
+
+    .mobile-menu {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 70%;
+        height: 100%;
+        background: #124a59;
+        padding: 20px;
+        transition: 0.3s;
+        z-index: 2000;
+        display: block;
+    }
+    
+    .mobile-menu button {
+        width: 100%;
+        margin: 15px 0;
+        padding: 12px;
+        border-radius: 8px;
+        border: none;
+        background: #0de499;
+        font-size: 16px;
+        cursor: pointer;
+    }
+    
+    .mobile-menu.active {
+        left: 0;
+    }
+    
+    .close-btn {
+        font-size: 24px;
+        color: white;
+        float: right;
+        cursor: pointer;
+    }
+    
+    /* Slide Pages */
+    .box {
+        position: fixed;
+        top: 0;
+        left: 100%;
+        width: 100%;
+        height: 100%;
+        background: #08262c;
+        color: white;
+        padding: 20px;
+        transition: 0.3s;
+        z-index: 3000;
+    }
+
+    .box.active {
+        left: 0;
+    }
+
+    .box span {
+        display: block;
+        cursor: pointer;
+        margin-bottom: 10px;
+    }
+}
+/* Hide mobile menu and box spans on desktop */
+@media (min-width: 769px) {
+
+    .mobile-menu,
+    .box span ,
+    .menu-btn{
+        display: none;
+    }
+}
