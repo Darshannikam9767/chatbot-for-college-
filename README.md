@@ -1,109 +1,89 @@
-# 🤖 College AI Chatbot — Team Project
+# 🤖 College AI Chatbot
 
-A college assistant application developed as a **team-based final-year project** to help students interact with college-related information through a web interface.
+A team-based **college assistant application** developed as our **BCA final-year project**.
 
-The project consists of a chatbot interface, an administrative dashboard, and backend services for managing college data.
+The application combines a **student-facing chatbot** with an **administrative management system** for managing college information such as faculty, departments, FAQs, timetable, events, and announcements.
+
+Both systems are connected to a **shared PostgreSQL database**.
 
 ---
 
 ## 📌 Project Overview
 
-The application is designed to provide students with a convenient way to access college-related information such as:
+The project consists of two major components:
 
-- Faculty
-- Departments
-- FAQs
-- Timetable
-- Events
-- Announcements
-- Other college information
+- 🤖 **Chatbot System** — Provides students with an interactive interface for asking college-related queries.
+- 🛠️ **Admin System** — Allows administrators to manage college information through a dedicated dashboard.
 
-The project was developed collaboratively, with different team members responsible for different parts of the system.
+The project was developed collaboratively by **Darshan Nikam** and **Tahir Khatik**, with each team member responsible for a different part of the application.
 
 ---
 
-## 👨‍💻 My Contribution
+## 👥 Who Did What?
 
-I was primarily responsible for the **administrative and backend-related functionality** of the project.
+| Area | Darshan Nikam | Tahir Khatik |
+|---|:---:|:---:|
+| 🤖 Chatbot Frontend | — | ✅ |
+| 🤖 Chatbot Backend | — | ✅ |
+| 🛠️ Admin Frontend | ✅ | — |
+| ⚙️ Admin Backend | ✅ | — |
+| 🗄️ PostgreSQL Database Creation | ✅ | — |
+| 🗄️ Database Design & Structure | ✅ | — |
+| 🔄 CRUD Operations | ✅ | — |
+| 🔐 Admin Authentication | ✅ | — |
+| 🌐 Admin REST APIs | ✅ | — |
+| 🧠 Chatbot Logic / NLP | — | ✅ |
+| 🔗 Admin Database Integration | ✅ | — |
+| 🔗 Chatbot Database Integration | — | ✅ |
+| 🔌 Admin Frontend-Backend Integration | ✅ | — |
+| 🔌 Chatbot Frontend-Backend Integration | — | ✅ |
 
-### Admin Dashboard
+### Responsibility Summary
 
-- Developed the admin dashboard
-- Implemented CRUD operations
-- Faculty management
-- Department management
-- FAQ management
-- Timetable management
-- Event management
-- Announcement management
-- Admin-side data management
+**Darshan Nikam**
 
-### Backend & Database
+- Complete Admin Frontend
+- Complete Admin Backend
+- REST API development
+- CRUD operations
+- Admin authentication
+- PostgreSQL database creation
+- Database design and structure
+- Database management
+- SQLAlchemy integration
+- Admin frontend-backend integration
 
-- Worked on backend functionality using Python and Flask
-- Developed backend routes and API functionality
-- Implemented database operations
-- Worked with PostgreSQL
-- Used SQLAlchemy for database interaction
-- Implemented authentication-related functionality
-- Worked on admin-side data flow between frontend, backend, and database
+**Tahir Khatik**
 
----
+- Complete Chatbot Frontend
+- Complete Chatbot Backend
+- Chatbot logic
+- NLP functionality
+- Student-facing interaction
+- Chatbot frontend-backend integration
+- PostgreSQL integration for chatbot functionality
 
-## 👥 Team Contribution
-
-The chatbot and NLP functionality was developed by another team member.
-
-The project was developed collaboratively, with each team member responsible for different components of the application.
-
----
-
-## 🛠️ Technologies
-
-### Frontend
-
-<p>
-  <img src="https://skillicons.dev/icons?i=html,css,js" />
-</p>
-
-**HTML5 · CSS3 · JavaScript**
-
-### Backend
-
-<p>
-  <img src="https://skillicons.dev/icons?i=python,flask" />
-</p>
-
-**Python · Flask · REST APIs**
-
-### Database
-
-<p>
-  <img src="https://skillicons.dev/icons?i=postgresql" />
-</p>
-
-**PostgreSQL · SQLAlchemy**
+> Both systems use the same PostgreSQL database. The database was created and structured by Darshan, while the chatbot backend developed by Tahir connects to the shared database.
 
 ---
 
-## 📂 Project Structure
+## 🏗️ Project Architecture
 
 ```text
-Frontend/
-│
-├── Assets/
-│   ├── botlogo.png
-│   └── seniorclglogo.jpeg
-│
-├── Chat Section/
-│   ├── index.html
-│   ├── script.js
-│   └── style.css
-│
-├── admin_dashboard/
-│   ├── admin.html
-│   ├── admin.js
-│   ├── after_login.html
-│   └── style.css
-│
-└── README.md
+                    COLLEGE AI ASSISTANT
+                           │
+             ┌─────────────┴─────────────┐
+             │                           │
+             ▼                           ▼
+      🤖 CHATBOT SYSTEM            🛠️ ADMIN SYSTEM
+             │                           │
+       ┌─────┴─────┐               ┌─────┴─────┐
+       │           │               │           │
+   Frontend     Backend         Frontend     Backend
+       │           │               │           │
+       └─────┬─────┘               └─────┬─────┘
+             │                           │
+             └─────────────┬─────────────┘
+                           ▼
+                  🗄️ POSTGRESQL
+                     DATABASE
