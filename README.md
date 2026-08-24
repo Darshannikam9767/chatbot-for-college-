@@ -1,47 +1,109 @@
-# College AI Chatbot -- Frontend
+# 🤖 College AI Chatbot — Team Project
 
-This repository contains the **frontend UI** of my College AI Chatbot
-project.
+A college assistant application developed as a **team-based final-year project** to help students interact with college-related information through a web interface.
+
+The project consists of a chatbot interface, an administrative dashboard, and backend services for managing college data.
+
+---
 
 ## 📌 Project Overview
 
-A simple, responsive chatbot interface built using: - HTML - CSS -
-JavaScript
+The application is designed to provide students with a convenient way to access college-related information such as:
 
-Designed for both **desktop and mobile** views.
+- Faculty
+- Departments
+- FAQs
+- Timetable
+- Events
+- Announcements
+- Other college information
 
-## 📂 Folder Structure
+The project was developed collaboratively, with different team members responsible for different parts of the system.
 
-    my-repo/
-        └── Frontend/
-                ├── ChatSection/
-                │       ├── index.html
-                │       ├── style.css
-                │       └── script.js
-                └── Assets/
-                        ├── botlogo.png
-                        └── seniorclglogo.jpeg
+---
 
+## 👨‍💻 My Contribution
 
-## 🚀 Features
+I was primarily responsible for the **administrative and backend-related functionality** of the project.
 
--   Clean chat UI
--   User & bot message bubbles
--   Mobile responsive layout
--   Custom fonts & icons
+### Admin Dashboard
 
-## 🛠 How to Run
+- Developed the admin dashboard
+- Implemented CRUD operations
+- Faculty management
+- Department management
+- FAQ management
+- Timetable management
+- Event management
+- Announcement management
+- Admin-side data management
 
-1.  Download or clone the project.
-2.  Open `index.html` in your browser.
-3.  Start chatting!
+### Backend & Database
 
-## 🧠 Future Scope
+- Worked on backend functionality using Python and Flask
+- Developed backend routes and API functionality
+- Implemented database operations
+- Worked with PostgreSQL
+- Used SQLAlchemy for database interaction
+- Implemented authentication-related functionality
+- Worked on admin-side data flow between frontend, backend, and database
 
--   Add backend with AI model
--   Store chat history
--   Voice input support
+---
 
-## 👤 Author
+## 👥 Team Contribution
 
-Tahir Khatik
+The chatbot and NLP functionality was developed by another team member.
+
+The project was developed collaboratively, with each team member responsible for different components of the application.
+
+---
+
+## 🛠️ Technologies
+
+### Frontend
+
+<p>
+  <img src="https://skillicons.dev/icons?i=html,css,js" />
+</p>
+
+**HTML5 · CSS3 · JavaScript**
+
+### Backend
+
+<p>
+  <img src="https://skillicons.dev/icons?i=python,flask" />
+</p>
+
+**Python · Flask · REST APIs**
+
+### Database
+
+<p>
+  <img src="https://skillicons.dev/icons?i=postgresql" />
+</p>
+
+**PostgreSQL · SQLAlchemy**
+
+---
+
+## 📂 Project Structure
+
+```text
+Frontend/
+│
+├── Assets/
+│   ├── botlogo.png
+│   └── seniorclglogo.jpeg
+│
+├── Chat Section/
+│   ├── index.html
+│   ├── script.js
+│   └── style.css
+│
+├── admin_dashboard/
+│   ├── admin.html
+│   ├── admin.js
+│   ├── after_login.html
+│   └── style.css
+│
+└── README.md
